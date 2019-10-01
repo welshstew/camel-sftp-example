@@ -40,6 +40,6 @@ public class Application extends RouteBuilder {
 
 //        from("sftp://foo@0.0.0.0:22222?password=123&passiveMode=true&disconnect=true&binary=true").to("log:hello");
 
-        from("sftp://{{sftp.address}}?preferredAuthentications=publickey&username={{sftp.username}}&password={{sftp.password}}&privateKeyFile={{sftp.privatekey}}&passiveMode=true&disconnect=true&binary=true").to("log:hello");
+        from("sftp://{{sftp.address}}?preferredAuthentications=publickey&username={{sftp.username}}&password={{sftp.password}}&privateKeyFile={{sftp.privatekey}}&passiveMode=true&disconnect=true&binary=true&useUserKnownHostsFile=false").to("log:hello");
     }
 }
